@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd redux-toolkit && npm install && npm run build",
+  "outputDirectory": "redux-toolkit/build",
+  "installCommand": "cd redux-toolkit && npm install"
+}
