@@ -1,135 +1,125 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One'); 
 
-.content{
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 1rem;
+}
+
+.content {
   margin: auto;
-  width: 800px;
+  max-width: 800px;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  padding: 0 1rem;
 }
+
 .content ul {
-  font-size: 24px;
+  font-size: clamp(16px, 3vw, 24px);
   list-style-type: none !important;
   display: flex;
   flex-direction: column;
+  padding: 0;
 }
-hr{
-  width: 900px;
+
+hr {
+  width: 100%;
+  max-width: 900px;
 }
+
 .content ul li {
   margin: 1rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.5rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  word-break: break-word;
 }
+
 h3 {
   margin: 0;
 }
+
 .admin-table {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 4rem 0;
-}
-.admin-table h1{
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 40px;
-  margin-top: 0px;
-  margin-bottom: 50px;
-}
-.admin-subtitle {
-  font-size: 3.2rem;
+  margin: 2rem 0;
+  gap: 1rem;
 }
 
-.add-btn {background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%)}
+.admin-table h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(24px, 5vw, 40px);
+  margin: 0 0 2rem 0;
+  width: 100%;
+}
+
+.admin-subtitle {
+  font-size: clamp(20px, 4vw, 32px);
+  flex: 1;
+  min-width: 200px;
+}
+
 .add-btn {
-  margin: 10px;
-  padding: 15px 45px;
+  background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
+  margin: 10px 0;
+  padding: 12px 24px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
-  color: white;            
+  color: white;
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
-  display: block;
   border: none;
-}
-.add-btn:hover {
+  font-size: clamp(12px, 2vw, 16px);
+  min-width: 150px;
   cursor: pointer;
-  background-position: right center; /* change the direction of the change here */
+}
+
+.add-btn:hover {
+  background-position: right center;
   color: #fff;
   text-decoration: none;
 }
 
 .btn-slice {
-  padding: 1.2rem 2.5rem;
+  padding: 1rem 2rem;
   border: 2px solid red;
-  border-radius: 0rem;
+  border-radius: 0;
   color: red;
-  font-size: 0.6875rem;
+  font-size: clamp(10px, 1.5vw, 14px);
   font-weight: 700;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
   position: relative;
-  
-  -webkit-transition: all 1000ms cubic-bezier(0.890, 0, 0.140, 1); /* older webkit */
-  -webkit-transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225); 
-  -moz-transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225); 
-  -o-transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225); 
-  transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225); /* custom */
-
-  -webkit-transition-timing-function: cubic-bezier(0.890, 0, 0.140, 1); /* older webkit */
-  -webkit-transition-timing-function: cubic-bezier(0.890, -0.170, 0.140, 1.225); 
-  -moz-transition-timing-function: cubic-bezier(0.890, -0.170, 0.140, 1.225); 
-  -o-transition-timing-function: cubic-bezier(0.890, -0.170, 0.140, 1.225); 
-  transition-timing-function: cubic-bezier(0.890, -0.170, 0.140, 1.225); /* custom */
+  transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225);
+  cursor: pointer;
 }
 
-.btn-slice .top  {
+.btn-slice .top {
   position: relative;
   height: 6px;
   overflow: hidden;
   top: 0;
-  -webkit-transition: all 300ms cubic-bezier(1.000, 0, 0.025, 1); /* older webkit */
-  -webkit-transition: all 300ms cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  -moz-transition: all 300ms cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  -o-transition: all 300ms cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  transition: all 300ms cubic-bezier(1.000, -0.055, 0.025, 1.040); /* custom */
-
-  -webkit-transition-timing-function: cubic-bezier(1.000, 0, 0.025, 1); /* older webkit */
-  -webkit-transition-timing-function: cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  -moz-transition-timing-function: cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  -o-transition-timing-function: cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  transition-timing-function: cubic-bezier(1.000, -0.055, 0.025, 1.040); /* custom */
-  -webkit-transition-delay:0.35s;     
-  -moz-transition-delay:0.35s; 
-  -ms-transition-delay:0.35s;     
-  -o-transition-delay:0.35s;     
-  transition-delay:0.35s;
+  transition: all 300ms cubic-bezier(1.000, -0.055, 0.025, 1.040);
+  transition-delay: 0.35s;
 }
 
-.btn-slice .bottom  {
+.btn-slice .bottom {
   position: relative;
   height: 6px;
   overflow: hidden;
   bottom: 0;
-  -webkit-transition: all 300ms cubic-bezier(1.000, 0, 0.025, 1); /* older webkit */
-  -webkit-transition: all 300ms cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  -moz-transition: all 300ms cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  -o-transition: all 300ms cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  transition: all 300ms cubic-bezier(1.000, -0.055, 0.025, 1.040); /* custom */
-
-  -webkit-transition-timing-function: cubic-bezier(1.000, 0, 0.025, 1); /* older webkit */
-  -webkit-transition-timing-function: cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  -moz-transition-timing-function: cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  -o-transition-timing-function: cubic-bezier(1.000, -0.055, 0.025, 1.040); 
-  transition-timing-function: cubic-bezier(1.000, -0.055, 0.025, 1.040); /* custom */
-  
-  -webkit-transition-delay:0.35s;     
-  -moz-transition-delay:0.35s; 
-  -ms-transition-delay:0.35s;     
-  -o-transition-delay:0.35s;     
-  transition-delay:0.35s;
+  transition: all 300ms cubic-bezier(1.000, -0.055, 0.025, 1.040);
+  transition-delay: 0.35s;
 }
 
 .btn-slice .bottom span {
@@ -140,26 +130,19 @@ h3 {
 
 .btn-slice:hover .top {
   top: -5px;
-  -webkit-transition-delay:0.35s;     
-  -moz-transition-delay:0.35s; 
-  -ms-transition-delay:0.35s;     
-  -o-transition-delay:0.35s;     
-  transition-delay:0.35s; 
+  transition-delay: 0.35s;
 }
 
 .btn-slice:hover .bottom {
   bottom: -5px;
-  -webkit-transition-delay:0.35s;     
-  -moz-transition-delay:0.35s; 
-  -ms-transition-delay:0.35s;     
-  -o-transition-delay:0.35s;     
-  transition-delay:0.35s; 
+  transition-delay: 0.35s;
 }
+
 .btn-slice:hover, .btn-slice:focus, .btn-slice:active {
-  cursor: pointer;
   margin-left: 10px;
 }
-.btn-slice:before{
+
+.btn-slice:before {
   content: '';
   height: 1px;
   width: 60px;
@@ -167,39 +150,78 @@ h3 {
   position: absolute;
   margin-top: 6px;
   right: -35px;
-  
-  -webkit-transition: all 1000ms cubic-bezier(0.890, 0, 0.140, 1); /* older webkit */
-  -webkit-transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225); 
-  -moz-transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225); 
-  -o-transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225); 
-  transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225); /* custom */
-
-  -webkit-transition-timing-function: cubic-bezier(0.890, 0, 0.140, 1); /* older webkit */
-  -webkit-transition-timing-function: cubic-bezier(0.890, -0.170, 0.140, 1.225); 
-  -moz-transition-timing-function: cubic-bezier(0.890, -0.170, 0.140, 1.225); 
-  -o-transition-timing-function: cubic-bezier(0.890, -0.170, 0.140, 1.225); 
-  transition-timing-function: cubic-bezier(0.890, -0.170, 0.140, 1.225); /* custom */
+  transition: all 1000ms cubic-bezier(0.890, -0.170, 0.140, 1.225);
 }
-.btn-slice:hover:before{
+
+.btn-slice:hover:before {
   width: 130%;
 }
-
-
-
 
 .delete-btn {
   background-color: transparent;
   border: none;
+  padding: 0.5rem;
+  cursor: pointer;
 }
 
 .delete-icon {
-  font-size: 24px;
+  font-size: clamp(20px, 3vw, 24px);
   color: #f12711;
   filter: drop-shadow(0.2rem 0.2rem 0.5rem rgb(255 0 0 / 0.2));
-  cursor: pointer;
 }
-@media screen and (max-width: 998px) {
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 0 0.5rem;
+  }
+  
+  .admin-table {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
   .admin-subtitle {
-    margin-bottom: 1.6rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .add-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .content ul li {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  
+  .btn-slice {
+    padding: 0.8rem 1.5rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+  .content {
+    padding: 0 0.25rem;
+  }
+  
+  .content ul li {
+    margin: 0.5rem 0;
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .admin-table {
+    margin: 0.5rem 0;
+  }
+  
+  .add-btn {
+    padding: 10px 20px;
+    margin: 5px 0;
   }
 }
